@@ -23,12 +23,80 @@ const home = props => {
         </div>
       </header>
       <main className={Styles.main}>
-        <div className={Styles.flex4}>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className={Styles.center}>
+          <div className={Styles.flex4}>
+            <div>
+              <h3>Our Story</h3>
+              <p>
+                Random random random random random random random randomRandom
+                random random random random random random random Random random
+                random random random random random random Random random random
+                random random random random random
+              </p>
+            </div>
+            <div>
+              <h3>Our Story</h3>
+              <p>
+                Random random random random random random random randomRandom
+                random random random random random random random Random random
+                random random random random random random Random random random
+                random random random random random
+              </p>
+            </div>
+            <div>
+              <h3>Our Story</h3>
+              <p>
+                Random random random random random random random randomRandom
+                random random random random random random random Random random
+                random random random random random random Random random random
+                random random random random random
+              </p>
+            </div>
+          </div>
         </div>
       </main>
+
+      <section className={Styles.two}>
+        <div className={Styles.flex}>
+          <div>
+            <Img fluid={props.data.front1.childImageSharp.fluid} />
+          </div>
+          <div>
+            <h2>Hello</h2>
+            <p>
+              Random random random random random random random randomRandom
+              random random random random random random random Random random
+              random random random random random random Random random random
+              random random random random random
+            </p>
+            <div className={Styles.buttonbox}>
+              <a className={Styles.b1}>Learn More</a>
+              <a className={Styles.b2}>Contact</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={Styles.two}>
+        <div className={Styles.flex}>
+          <div>
+            <h2>Hello</h2>
+            <p>
+              Random random random random random random random randomRandom
+              random random random random random random random Random random
+              random random random random random random Random random random
+              random random random random random
+            </p>
+            <div className={Styles.buttonbox}>
+              <a className={Styles.b1}>Learn More</a>
+              <a className={Styles.b2}>Contact</a>
+            </div>
+          </div>
+          <div>
+            <Img fluid={props.data.front1.childImageSharp.fluid} />
+          </div>
+        </div>
+      </section>
     </>
   )
 }

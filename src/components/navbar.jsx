@@ -32,9 +32,7 @@ const Navbar = ({ props }) => {
       <div className={`${Styles.outer}  ${showtime} ${ismenuopen} ${bshadow}`}>
         <div className={Styles.container}>
           <h3 className="blue">
-            <Link to="/">
-              HER2.<span className={Styles.me}>ME</span>
-            </Link>
+            <Link to="/">Trinity Farms</Link>
           </h3>
 
           <nav
@@ -59,32 +57,9 @@ const Navbar = ({ props }) => {
                   className={Styles.darrow}
                   to="/basics"
                 >
-                  Basics
+                  Services
                 </Link>
-                <div className={Styles.drop}>
-                  <Link
-                    activeClassName={Styles.active}
-                    activeClassName={Styles.active}
-                    to="/whatis"
-                  >
-                    What is HER2?
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Stages
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    History
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    HER2+ (Positive)
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    HER2- (Negative)
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    link6
-                  </Link>
-                </div>
+                <div className={Styles.drop}></div>
               </li>
               <li>
                 <Link
@@ -92,78 +67,13 @@ const Navbar = ({ props }) => {
                   className={Styles.darrow}
                   to="/traditional"
                 >
-                  Traditional
-                </Link>
-                <div className={Styles.drop}>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Chemotherapy
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Immunotherapy
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Surgery
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Radiation
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Herceptin (Trastuzumab)
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Perjeta (Pertuzumab)
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Kadcyla
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Nerlynx (Neratinib)
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Tykerb (Lapatinib)
-                  </Link>
-                </div>
-              </li>
-              <li>
-                <Link
-                  activeClassName={Styles.active}
-                  className={Styles.darrow}
-                  to="/alternative"
-                >
-                  Alternative
-                </Link>
-                <div className={Styles.drop}>
-                  <Link
-                    activeClassName={Styles.active}
-                    to="/alternative/oliveleaf"
-                  >
-                    Olive Leaf
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    Fake Treatments
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    link3
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    link4
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    link5
-                  </Link>
-                  <Link activeClassName={Styles.active} to="/nope">
-                    link6
-                  </Link>
-                </div>
-              </li>
-              <li>
-                <Link activeClassName={Styles.active} to="/blog">
-                  Blog{" "}
-                </Link>
-              </li>
-              <li>
-                <Link activeClassName={Styles.active} to="/about">
                   About
+                </Link>
+                <div className={Styles.drop}></div>
+              </li>
+              <li>
+                <Link activeClassName={Styles.active} to="/alternative">
+                  Contact
                 </Link>
               </li>
             </ul>

@@ -1,3 +1,9 @@
+@mixin tabletL {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
 .header {
   height: 100vh;
   position: relative;
@@ -44,9 +50,14 @@
     padding-right: 1rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     //z-index: 3;
     //border: 1px solid red;
     padding-top: 9rem;
+    @media screen and (max-width: 840px) {
+      flex-direction: column;
+      padding-top: 3rem;
+    }
 
     h1 {
       //color: rgb(248, 83, 42);
@@ -54,11 +65,17 @@
       font-size: 3rem;
       text-shadow: 6px 6px 3px #000;
       font-family: "Pacifico";
+      @media screen and (max-width: 840px) {
+        text-align: center;
+      }
     }
     p {
       font-size: 1.3rem;
       color: rgb(1, 14, 13);
       font-weight: bold;
+      @media screen and (max-width: 840px) {
+        text-align: center;
+      }
     }
     .flexitem {
       flex: 1;
@@ -70,6 +87,9 @@
         border-bottom-right-radius: 80px;
         border-radius: 80px;
         z-index: 2;
+        @media screen and (max-width: 840px) {
+          max-width: 840px;
+        }
       }
 
       img {
@@ -81,12 +101,17 @@
 }
 
 .main {
-  background-color: rgb(243, 124, 124);
-  height: 100vh;
-
+  //background-color: rgb(243, 124, 124);
+  background-color: #1cdffe;
+  //height: 100vh;
+  min-height: 50vh;
   position: relative;
 }
-
+.center {
+  max-width: 1300px;
+  position: relative;
+  margin: 0 auto;
+}
 .flex4 {
   //border: 1px solid red;
   position: absolute;
@@ -121,7 +146,101 @@
     &:hover {
       transition: ease-in-out 0.3s all;
       box-shadow: rgba(0, 0, 0, 0.24) -1px 2px 24px 0px;
-      transform: scale(1.1);
+      transform: scale(1.01);
     }
+  }
+}
+
+.two {
+  background-color: #fff;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  .flex {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    @include tabletL {
+      flex-direction: column;
+      //justify-content: center;
+      //align-items: center;
+    }
+
+    > div {
+      max-width: 700px;
+      flex: 1;
+      margin: 1rem;
+    }
+    h2 {
+      font-size: 2.125rem;
+      margin-bottom: 1.5rem;
+      @include tabletL {
+        text-align: center;
+      }
+    }
+    p {
+      font-size: 1.125rem;
+      line-height: 1.7rem;
+      margin-bottom: 1.9rem;
+    }
+  }
+}
+
+.buttonbox {
+  @include tabletL {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.b1 {
+  background-color: #00c6ff;
+  border: 2px solid #00c6ff;
+  border-radius: 1.75em;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+  padding: 0.8em 2.75em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  vertical-align: middle;
+  margin-right: 1rem;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    color: #00c6ff;
+    outline: 0;
+  }
+}
+
+.b2 {
+  background-color: transparent;
+  border: 2px solid #00c6ff;
+  border-radius: 1.75em;
+  box-sizing: border-box;
+  //color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+  padding: 0.8em 2.75em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #00c6ff;
+    color: #fff;
   }
 }
